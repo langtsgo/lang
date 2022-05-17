@@ -1,0 +1,37 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'org.relay.lang'
+version '0.0.0.1'
+
+// This field defines the Java version your mod target.
+def targetJavaVersion = 17
+
+java {
+    sourceCompatibility = JavaVersion.toVersion(targetJavaVersion)
+    targetCompatibility = JavaVersion.toVersion(targetJavaVersion)
+
+    withSourcesJar()
+}
+
+repositories {
+    maven{
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        allowInsecureProtocol true
+    }
+    maven {
+        url 'https://jitpack.io'
+    }
+    google()
+    // mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.netty', name: 'netty-all', version: '5.0.0.Alpha2'
+}
+
+test {
+    useJUnitPlatform()
+}

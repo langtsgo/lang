@@ -1,0 +1,32 @@
+build
+.git
+*.tgz
+install
+jre7
+UdpHolePunch
+/bin/
+.settings
+.vscode
+.project
+.idea
+*.iml
+.target
+.lst
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
